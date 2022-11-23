@@ -29,7 +29,7 @@ pointcheck = 1;
 if (actual == '*' && zerocheck && !pointcheck)
 {
 width = va_arg(list, unsigned int);
-break
+break;
 }
 if ((_isdig || actual == '0') && zerocheck && !pointcheck)
 {

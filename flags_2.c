@@ -17,7 +17,7 @@
 void app_flags(const char *pattern, int len_p, char *buffer, int *len_b, int wi, int pr)
 {
 (void) wi;
-/*len_b = pattern[len_p - 1] == 'c' ? *len_b : _strlen(buffer);
+*len_b = pattern[len_p - 1] == 'c' ? *len_b : _strlen(buffer);
 /* Applies precision */
 if (pattern[len_p - 1] != 'c' && pattern[len_p - 1] != 'p')
 *len_b = app_precision(pattern, len_p, buffer, pr);
@@ -87,7 +87,7 @@ return (val);
 *
 * Return: the final length of the string
 */
-nt app_width(char *buffer, int len_b, int wi)
+int app_width(char *buffer, int len_b, int wi)
 {
 int i, mov = wi - len_b;
 for (i = wi; i >= 0; i--)
